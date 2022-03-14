@@ -1,0 +1,66 @@
+<!doctype html>
+{% extends 'college.html' %}
+{% block content %}
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href=" {% static 'static1/fonts/icomoon/style.css' %} ">
+
+    <link rel="stylesheet" href=" {% static 'static1/css/owl.carousel.min.css' %} ">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href=" {% static 'static1/css/bootstrap.min.css' %} ">
+
+    <!-- Style -->
+    <link rel="stylesheet" href=" {% static 'static1/css/style.css' %} ">
+
+    <title>Student</title>
+  </head>
+  <body>
+
+  <div class="content">
+
+    <div class="container">
+      <h2 class="mb-5">Student</h2>
+
+      <div class="table-responsive">
+
+        <table class="table custom-table">
+
+      <thead>
+            <tr>
+
+              <th scope="col">Name</th>
+              <th scope="col">Roll No</th>
+              <th scope="col">Contact No</th>
+              <th scope="col">E mail</th>
+
+            </tr>
+          </thead>
+          <tbody>
+     {% for i in data %}
+    <tr>
+
+        <td>{{i.name}}</td>
+        <td>{{i.Roll_no}}</td>
+        <td>{{i.contact_no}}</td>
+        <td>{{i.e_mail}}</td>
+    </tr>
+    {% endfor %}
+
+
+
+
+
+    <script src=" {% static 'static1/js/jquery-3.3.1.min.js' %} "></script>
+    <script src=" {% static 'static1/js/popper.min.js' %} "></script>
+    <script src=" {% static 'static1/js/bootstrap.min.js' %} "></script>
+    <script src=" {% static 'static1/js/main.js' %} "></script>
+  </body>
+</html>
+{% endblock %}

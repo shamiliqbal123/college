@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+{% extends 'college.html' %}
+{% block content %}
+{% load static %}
+{% load crispy_forms_tags %}
+<html lang="en">
+
+
+<head>
+
+</head>
+
+<body>
+        <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-4">
+                <div class="card-body">
+                    <h2 class="title">Add student</h2>
+                    <form method="post">
+    {% csrf_token %}
+
+    {{ form|crispy }}
+    <input type="submit" value="submit">
+</form>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+{% endblock %}
